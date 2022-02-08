@@ -1,0 +1,161 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Tue Feb  8 15:44:57 2022
+| Host         : gmojicar-Lenovo-YOGA-520-14IKB running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_control_sets -verbose -file nexys4ddr_control_sets.rpt
+| Design       : nexys4ddr
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    83 |
+|    Minimum number of control sets                        |    83 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   220 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    83 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |    19 |
+| >= 6 to < 8        |     8 |
+| >= 8 to < 10       |     8 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    41 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             207 |          109 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             492 |          191 |
+| Yes          | No                    | No                     |             538 |          188 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             671 |          229 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+----------------------------------------------+--------------------------------------------+------------------+----------------+
+|            Clock Signal            |                 Enable Signal                |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
++------------------------------------+----------------------------------------------+--------------------------------------------+------------------+----------------+
+|  ultrasonido/freq1/newCLK          | ultrasonido/trig_i_1_n_0                     |                                            |                1 |              1 |
+|  clk_IBUF_BUFG                     | serial_tx_rs232phytx_next_value_ce1          | int_rst                                    |                1 |              1 |
+|  ultrasonido/freq1/newCLK          | ultrasonido/dist[8]_i_1_n_0                  | ultrasonido/dist[6]_i_1_n_0                |                1 |              1 |
+|  clk_IBUF_BUFG                     | picorv32/instr_lui0                          | picorv32/instr_jalr_i_1_n_0                |                1 |              1 |
+|  CamaraVGADriver/clk25_24/CLK_OUT1 |                                              |                                            |                1 |              2 |
+|  ultrasonido/freq1/newCLK          |                                              |                                            |                3 |              4 |
+|  clk_IBUF_BUFG                     | picorv32/mem_addr_reg[2]_1                   | int_rst                                    |                1 |              4 |
+|  clk_IBUF_BUFG                     | picorv32/mem_addr_reg[3]_1[0]                | int_rst                                    |                2 |              4 |
+|  clk_IBUF_BUFG                     | picorv32/is_lui_auipc_jal_jalr_addi_add_sub0 | picorv32/instr_timer_i_1_n_0               |                2 |              4 |
+|  clk_IBUF_BUFG                     |                                              | picorv32/pcpi_mul/instr_mulhu_i_1_n_0      |                1 |              4 |
+| ~clk_IBUF_BUFG                     |                                              |                                            |                2 |              4 |
+|  clk_IBUF_BUFG                     |                                              | picorv32/pcpi_div/instr_rem_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG                     | uart_rx_fifo_wrport_we__0                    | int_rst                                    |                1 |              4 |
+|  clk_IBUF_BUFG                     | uart_rx_fifo_rdport_re                       | int_rst                                    |                1 |              4 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_timeout_counter[3]_i_2_n_0     | picorv32/pcpi_mul/SS[0]                    |                1 |              4 |
+|  clk_IBUF_BUFG                     | uart_tx_fifo_syncfifo_re                     | int_rst                                    |                1 |              4 |
+|  clk_IBUF_BUFG                     | rx_tick                                      | rx_phase[31]_i_1_n_0                       |                1 |              4 |
+|  clk_IBUF_BUFG                     | tx_tick                                      | tx_phase[31]_i_1_n_0                       |                1 |              4 |
+|  clk_IBUF_BUFG                     |                                              | picorv32/mem_addr_reg[5]_0                 |                1 |              5 |
+|  Aclock0_IBUF_BUFG                 |                                              |                                            |                4 |              5 |
+|  clk_IBUF_BUFG                     | picorv32/instr_lui0                          | picorv32/decoded_rs1__0[4]                 |                1 |              5 |
+|  clk_IBUF_BUFG                     | picorv32/is_lui_auipc_jal_jalr_addi_add_sub0 | picorv32/instr_lhu_i_1_n_0                 |                2 |              5 |
+|  clk_IBUF_BUFG                     | uart_rx_fifo_level0[4]_i_1_n_0               | int_rst                                    |                2 |              5 |
+|  clk_IBUF_BUFG                     | picorv32/mem_addr_reg[2]_0[0]                | int_rst                                    |                1 |              5 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_mul/instr_jal_reg              | picorv32/pcpi_mul/mem_do_prefetch_reg      |                2 |              6 |
+|  clk_IBUF_BUFG                     | picorv32/mem_addr_reg[2]_3[0]                | int_rst                                    |                2 |              6 |
+|  clk_IBUF_BUFG                     | picorv32/latched_rd[5]_i_1_n_0               |                                            |                2 |              6 |
+|  ultrasonido/freq1/newCLK          | ultrasonido/dist[8]_i_1_n_0                  |                                            |                3 |              6 |
+|  Aclock0_IBUF_BUFG                 | CamaraVGADriver/Cam/PromedioColorR135_out    | int_rst                                    |                3 |              6 |
+|  CamaraVGADriver/VGA/CounterY__0   |                                              |                                            |                3 |              6 |
+|  clk_IBUF_BUFG                     |                                              | picorv32/mem_addr_reg[13]_2                |                2 |              6 |
+|  clk_IBUF_BUFG                     | tx_data1_in0                                 |                                            |                1 |              7 |
+|  clk_IBUF_BUFG                     | uart_tx_fifo_syncfifo_re                     |                                            |                2 |              8 |
+|  clk_IBUF_BUFG                     | rx_data_rs232phyrx_next_value_ce1            |                                            |                2 |              8 |
+|  clk_IBUF_BUFG                     | MapaWrite_storage                            |                                            |                2 |              8 |
+|  clk_IBUF_BUFG                     |                                              | picorv32/mem_addr_reg[13]_1                |                4 |              8 |
+|  CamaraVGADriver/clk25_24/CLK_OUT1 |                                              | CamaraVGADriver/VGA/countX[8]_i_1_n_0      |                3 |              8 |
+|  clk_IBUF_BUFG                     | uart_rx_fifo_rdport_re                       |                                            |                2 |              8 |
+|  CamaraVGADriver/clk25_24/CLK_OUT1 | CamaraVGADriver/VGA/sel                      | int_rst                                    |                7 |              9 |
+|  clk_IBUF_BUFG                     |                                              | picorv32/SR[0]                             |                3 |              9 |
+|  clk_IBUF_BUFG                     | picorv32/is_lui_auipc_jal_jalr_addi_add_sub0 | picorv32/decoded_imm[31]_i_1_n_0           |                3 |             12 |
+|  Aclock0_IBUF_BUFG                 |                                              | CamaraVGADriver/Cam/PixelData[11]_i_1_n_0  |                9 |             12 |
+|  clk_IBUF_BUFG                     | picorv32/mem_addr_reg[2]_1                   |                                            |                2 |             16 |
+|  clk_IBUF_BUFG                     | uart_rx_fifo_wrport_we__0                    |                                            |                2 |             16 |
+|  ultrasonido/freq1/newCLK          | ultrasonido/FSM_sequential_status[1]_i_1_n_0 |                                            |               12 |             17 |
+|  Aclock0_IBUF_BUFG                 | CamaraVGADriver/Cam/Ancho_R_Prev             | CamaraVGADriver/Cam/clear                  |                7 |             18 |
+|  clk_IBUF_BUFG                     | picorv32/mem_xfer                            | picorv32/mem_rdata_q[24]_i_1_n_0           |               10 |             18 |
+|  clk_IBUF_BUFG                     | picorv32/count_reg_12_sn_1                   | picorv32/mem_valid_reg_0                   |                5 |             20 |
+|  clk_IBUF_BUFG                     | picorv32/is_lui_auipc_jal_jalr_addi_add_sub0 | picorv32/mem_state2                        |                7 |             22 |
+|  clk_IBUF_BUFG                     |                                              | ultrasonido/freq1/clear                    |                8 |             29 |
+|  Aclock0_IBUF_BUFG                 |                                              | int_rst                                    |               20 |             30 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_div/divisor                    | picorv32/pcpi_div/divisor[30]_i_1_n_0      |               12 |             31 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_div/quotient_msk               | picorv32/pcpi_div/quotient_msk[31]_i_1_n_0 |                8 |             32 |
+|  clk_IBUF_BUFG                     |                                              | rx_phase[31]_i_1_n_0                       |                8 |             32 |
+|  clk_IBUF_BUFG                     |                                              | tx_phase[31]_i_1_n_0                       |                8 |             32 |
+|  clk_IBUF_BUFG                     |                                              | picorv32/mem_addr_reg[12]_0                |               12 |             32 |
+|  clk_IBUF_BUFG                     |                                              | picorv32/mem_addr_reg[13]_0                |               11 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/timer                               | picorv32/mem_state2                        |               17 |             32 |
+|  clk_IBUF_BUFG                     | bus_errors                                   | int_rst                                    |                8 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/reg_op2[31]_i_1_n_0                 |                                            |               15 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/E[0]                                | int_rst                                    |                7 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/irq_mask                            | picorv32/mem_state2                        |               18 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_mul/pcpi_wr0                   |                                            |               10 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/mem_addr_reg[12]_1[0]               | int_rst                                    |                8 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_div/dividend                   |                                            |                8 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_div/quotient                   | picorv32/pcpi_div/quotient_msk[31]_i_1_n_0 |               11 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_div/divisor                    |                                            |               10 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/mem_addr_reg[13]_3[0]               | int_rst                                    |                8 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/reg_op1[31]_i_1_n_0                 |                                            |               25 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/mem_wdata[31]_i_1_n_0               |                                            |                5 |             32 |
+|  clk_IBUF_BUFG                     | timer_update_value_re                        | int_rst                                    |                7 |             32 |
+|  clk_IBUF_BUFG                     | picorv32/mem_addr[31]_i_1_n_0                |                                            |               22 |             34 |
+|  clk_IBUF_BUFG                     | picorv32/instr_lui0                          |                                            |               12 |             34 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_mul/reset_storage_reg[0]       | picorv32/pcpi_mul/mul_counter[6]           |               18 |             47 |
+|  clk_IBUF_BUFG                     | picorv32/is_lui_auipc_jal_jalr_addi_add_sub0 |                                            |               18 |             51 |
+|  clk_IBUF_BUFG                     | picorv32/reg_pc                              | picorv32/mem_state2                        |               24 |             64 |
+|  clk_IBUF_BUFG                     | picorv32/irq_delay                           | picorv32/mem_state2                        |               17 |             65 |
+|  clk_IBUF_BUFG                     |                                              | int_rst                                    |               31 |             75 |
+|  clk_IBUF_BUFG                     |                                              | picorv32/mem_state2                        |               29 |             81 |
+|  clk_IBUF_BUFG                     | picorv32/p_0_in__0                           |                                            |               22 |             88 |
+|  Aclock0_IBUF_BUFG                 |                                              | CamaraVGADriver/Cam/clear                  |               40 |             93 |
+|  clk_IBUF_BUFG                     | picorv32/pcpi_mul/reset_storage_reg[0]       |                                            |               38 |            166 |
+|  clk_IBUF_BUFG                     |                                              |                                            |               96 |            186 |
++------------------------------------+----------------------------------------------+--------------------------------------------+------------------+----------------+
+
+

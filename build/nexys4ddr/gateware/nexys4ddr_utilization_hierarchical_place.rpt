@@ -1,0 +1,45 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Tue Feb  8 15:44:56 2022
+| Host         : gmojicar-Lenovo-YOGA-520-14IKB running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_utilization -hierarchical -file nexys4ddr_utilization_hierarchical_place.rpt
+| Design       : nexys4ddr
+| Device       : 7a100tcsg324-1
+| Design State : Fully Placed
+-----------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------+-------------------+------------+------------+---------+------+------+--------+--------+--------------+
+|        Instance       |       Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++-----------------------+-------------------+------------+------------+---------+------+------+--------+--------+--------------+
+| nexys4ddr             |             (top) |       2934 |       2822 |     112 |    0 | 1908 |     26 |      0 |            2 |
+|   (nexys4ddr)         |             (top) |        200 |        184 |      16 |    0 |  501 |     14 |      0 |            0 |
+|   CamaraVGADriver     |   CamaraVGADriver |        474 |        466 |       8 |    0 |  193 |     12 |      0 |            2 |
+|     (CamaraVGADriver) |   CamaraVGADriver |          0 |          0 |       0 |    0 |    6 |      0 |      0 |            2 |
+|     Cam               |            OV7670 |        348 |        348 |       0 |    0 |  164 |      0 |      0 |            0 |
+|     Camara            |          ImBuffer |          0 |          0 |       0 |    0 |    0 |     12 |      0 |            0 |
+|     Mapa              |        ImBufferv2 |         12 |          4 |       8 |    0 |    4 |      0 |      0 |            0 |
+|     VGA               | VGA_Driver640x480 |        114 |        114 |       0 |    0 |   19 |      0 |      0 |            0 |
+|     clk25_24          |   clk24_25_nexys4 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |            0 |
+|   picorv32            |          picorv32 |       2072 |       1984 |      88 |    0 | 1129 |      0 |      0 |            0 |
+|     (picorv32)        |          picorv32 |       1356 |       1268 |      88 |    0 |  674 |      0 |      0 |            0 |
+|     pcpi_div          | picorv32_pcpi_div |        387 |        387 |       0 |    0 |  200 |      0 |      0 |            0 |
+|     pcpi_mul          | picorv32_pcpi_mul |        331 |        331 |       0 |    0 |  255 |      0 |      0 |            0 |
+|   ruedas              |            ruedas |          2 |          2 |       0 |    0 |    4 |      0 |      0 |            0 |
+|   servo_radar         |       servo_radar |         34 |         34 |       0 |    0 |   22 |      0 |      0 |            0 |
+|   ultrasonido         |       ultrasonido |        152 |        152 |       0 |    0 |   59 |      0 |      0 |            0 |
+|     (ultrasonido)     |       ultrasonido |        143 |        143 |       0 |    0 |   29 |      0 |      0 |            0 |
+|     freq1             |           divFreq |          9 |          9 |       0 |    0 |   30 |      0 |      0 |            0 |
++-----------------------+-------------------+------------+------------+---------+------+------+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+
